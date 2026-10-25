@@ -48,3 +48,13 @@ npm run preview
 基于 [sanidhyy/3d-portfolio](https://github.com/sanidhyy/3d-portfolio) 改造，原项目采用 MIT 许可；保留 [LICENSE.md](LICENSE.md)。3D 模型分别由 Yolala1232 和 cmzw 创作，采用 CC BY 4.0，完整署名见 [`public/credits.html`](public/credits.html)。
 
 此仓库已移除原模板的个人项目、工作经历、评价、联系方式、邮件服务及自动修改 README 的工作流。
+
+## Interactive showcase collection
+
+| Experience | Live site | Source |
+| --- | --- | --- |
+| ORBIT — cinematic WebGL | https://zhaocun-orbit.netlify.app | https://github.com/cosmopolitan033/zhaocun-orbit |
+| CURRENT — fluid color lab | https://zhaocun-current.netlify.app | https://github.com/cosmopolitan033/zhaocun-current |
+| FORME — editorial motion | https://zhaocun-forme.netlify.app | https://github.com/cosmopolitan033/zhaocun-forme |
+
+These are personal creative development studies. Each site retains its upstream source and asset credits. Update their text in each repository’s `src/content.js`. The parent portfolio’s cards and links are configured in `src/content.ts`.

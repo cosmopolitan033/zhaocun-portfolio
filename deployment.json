@@ -1,7 +1,7 @@
 {
   "provider": "Netlify",
   "project_id": "95d0ff6f-340c-4883-8d58-cac6c2c18d07",
-  "deploy_id": "6ade4021b8e6da0112fe0468",
+  "deploy_id": "6ade48363d1eac6d706fadc9",
   "initial_project_slug": "quiet-beijinho-62344d",
   "content_source": "https://github.com/cosmopolitan033",
   "build_command": "npm run build",
@@ -11,11 +11,39 @@
     "production build passed",
     "all model asset paths resolved",
     "desktop 3D scene and modal checked",
-    "400px mobile menu and project layout checked"
+    "400px mobile menu and project layout checked",
+    "ORBIT, CURRENT, FORME links and preview images checked",
+    "anonymous production JS and CSS exactly match local production build"
   ],
   "url": "https://zhaocun-portfolio.netlify.app",
   "project_slug": "zhaocun-portfolio",
   "visibility": "public",
   "repository": "https://github.com/cosmopolitan033/zhaocun-portfolio",
-  "anonymous_http_verification": "HTTP 200: homepage, JS, CSS, both 3D model files, credits"
+  "anonymous_http_verification": "HTTP 200: homepage, JS, CSS, both 3D model files, credits",
+  "deployment_method": "Netlify Drop ZIP upload",
+  "archive_sha256": "a258db166cd93f5e82026276f5b8626f8fc8fffbeacdecea8d82b24fb6daf77a",
+  "verified_assets": [
+    {
+      "path": "/assets/index-C0to7Rxv.js",
+      "sha256": "201c87edb37f29aa0535f749de446e147740138b1b47c655d80565d7518fe070"
+    },
+    {
+      "path": "/assets/index-BDgvMzZ0.css",
+      "sha256": "8ee89e57dc40252190f0b88eebb809a4b3a214b24e8525e4339c972ae3a6ba97"
+    }
+  ],
+  "showcases": {
+    "orbit": {
+      "url": "https://zhaocun-orbit.netlify.app",
+      "repository": "https://github.com/cosmopolitan033/zhaocun-orbit"
+    },
+    "current": {
+      "url": "https://zhaocun-current.netlify.app",
+      "repository": "https://github.com/cosmopolitan033/zhaocun-current"
+    },
+    "forme": {
+      "url": "https://zhaocun-forme.netlify.app",
+      "repository": "https://github.com/cosmopolitan033/zhaocun-forme"
+    }
+  }
 }
