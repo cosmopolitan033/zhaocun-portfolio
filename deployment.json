@@ -1,0 +1,21 @@
+{
+  "provider": "Netlify",
+  "project_id": "95d0ff6f-340c-4883-8d58-cac6c2c18d07",
+  "deploy_id": "6ade4021b8e6da0112fe0468",
+  "initial_project_slug": "quiet-beijinho-62344d",
+  "content_source": "https://github.com/cosmopolitan033",
+  "build_command": "npm run build",
+  "publish_directory": "dist",
+  "checks": [
+    "TypeScript passed",
+    "production build passed",
+    "all model asset paths resolved",
+    "desktop 3D scene and modal checked",
+    "400px mobile menu and project layout checked"
+  ],
+  "url": "https://zhaocun-portfolio.netlify.app",
+  "project_slug": "zhaocun-portfolio",
+  "visibility": "public",
+  "repository": "https://github.com/cosmopolitan033/zhaocun-portfolio",
+  "anonymous_http_verification": "HTTP 200: homepage, JS, CSS, both 3D model files, credits"
+}
