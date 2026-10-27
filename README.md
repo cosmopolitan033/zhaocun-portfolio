@@ -1,6 +1,6 @@
 # zhaocun · 3D Portfolio
 
-**[查看线上作品集](https://zhaocun-portfolio.netlify.app)**
+**[查看线上作品集](https://zhaocun.netlify.app)**
 
 Zhaocun Sun 的个人作品集。深色紫色视觉、可拖动的 3D 电脑、星球场景、滚动动画、项目详情弹窗和手机布局。内容来自 [GitHub 主页](https://github.com/cosmopolitan033)及公开项目 README。
 
@@ -33,7 +33,7 @@ npm run preview
 
 ## Netlify 部署
 
-当前网址：https://zhaocun-portfolio.netlify.app
+当前网址：https://zhaocun.netlify.app
 
 当前为已上传构建文件的部署。更新时执行 `npm run build`，将 `dist/` 文件夹拖到 Netlify 的 Deploys 页面即可。也可以在 Netlify 连接本仓库，构建命令为 `npm run build`，发布目录为 `dist`；若安装提示 peer dependency 冲突，设置 `NPM_FLAGS=--legacy-peer-deps`。
 

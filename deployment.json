@@ -13,8 +13,8 @@
     "Project introductions updated to match all three expanded sites",
     "Anonymous production JS and CSS exactly match local build"
   ],
-  "url": "https://zhaocun-portfolio.netlify.app",
-  "project_slug": "zhaocun-portfolio",
+  "url": "https://zhaocun.netlify.app",
+  "project_slug": "zhaocun",
   "visibility": "public",
   "repository": "https://github.com/cosmopolitan033/zhaocun-portfolio",
   "anonymous_http_verification": "HTTP 200: homepage, JS, CSS, both 3D model files, credits",
@@ -53,5 +53,7 @@
   "verified_bundle_assets": [
     "/assets/index-DiaQdn4j.js",
     "/assets/index-DF8WEYqk.css"
-  ]
+  ],
+  "previous_url": "https://zhaocun-portfolio.netlify.app",
+  "domain_changed_date": "2026-10-27"
 }
