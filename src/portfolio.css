@@ -6,3 +6,7 @@
 .showcase-preview{padding:0;overflow:hidden;background:#090b10}.showcase-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s}.project-open:hover .showcase-preview img{transform:scale(1.04)}.preview-caption{position:absolute;bottom:0;left:0;width:100%;display:flex;justify-content:space-between;padding:12px 16px;background:linear-gradient(transparent,#000b);font-size:8px;letter-spacing:1.5px;color:#fff}.project-links{display:flex;align-items:center;justify-content:space-between;gap:10px}.source-link{font-size:11px;color:#9692b0}.dialog-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.project-dialog .showcase-preview{height:auto;aspect-ratio:1.98}.project-dialog .showcase-preview img{height:100%}
 
 .project-card .showcase-preview{height:auto;aspect-ratio:1.98}.project-card .showcase-preview img{object-fit:contain}
+
+.showcase-preview.browser-capture img{height:auto;object-fit:initial;transform:translateY(-8.3%)}.project-open:hover .showcase-preview.browser-capture img{transform:translateY(-8.3%) scale(1.04)}
+.hero-computer-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;opacity:1}.hero-computer-poster.is-ready{opacity:0;visibility:hidden}
+@media(max-width:767px){.hero-computer-poster{object-fit:contain;object-position:center 70%}}

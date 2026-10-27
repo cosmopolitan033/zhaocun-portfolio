@@ -5,7 +5,7 @@
   "initial_project_slug": "mellifluous-yeot-d75e80",
   "project_slug": "zhaocun-showcase-review",
   "url": "https://zhaocun-showcase-review.netlify.app/",
-  "purpose": "User review candidate; original portfolio and project production sites unchanged",
+  "purpose": "Archived review snapshot approved on 2026-10-27; CURRENT and FORME promoted to production",
   "deployment_method": "Netlify Drop ZIP",
   "archive_sha256": "2768defc9dac08479bba35e725b25d5a8c61dc826bea8ca5c82eb479195ccf96",
   "verified_assets": [
@@ -50,5 +50,6 @@
     "warp and atmosphere switching",
     "pause controls",
     "anonymous HTML/JS/CSS exact-match verification"
-  ]
+  ],
+  "approval_date": "2026-10-27"
 }

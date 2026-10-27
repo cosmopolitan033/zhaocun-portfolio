@@ -29,7 +29,7 @@ npm run preview
 - `projects`：作品标题、简介、详情、标签、仓库地址
 - `github`、`contact`：个人链接和联系文案
 
-页面布局：`src/portfolio.tsx`；视觉样式：`src/portfolio.css`。项目封面是概念插画，可在 `ProjectArt` 中替换为自己的图片。
+页面布局：`src/portfolio.tsx`；视觉样式：`src/portfolio.css`。项目封面为作品实际截图，资源在 `public/showcases/`，通过 `src/content.ts` 配置。
 
 ## Netlify 部署
 
@@ -54,7 +54,11 @@ npm run preview
 | Experience | Live site | Source |
 | --- | --- | --- |
 | ORBIT — cinematic WebGL | https://zhaocun-orbit.netlify.app | https://github.com/cosmopolitan033/zhaocun-orbit |
-| CURRENT — fluid color lab | https://zhaocun-current.netlify.app | https://github.com/cosmopolitan033/zhaocun-current |
-| FORME — editorial motion | https://zhaocun-forme.netlify.app | https://github.com/cosmopolitan033/zhaocun-forme |
+| CURRENT — immersive neon drive | https://zhaocun-current.netlify.app | https://github.com/cosmopolitan033/zhaocun-current |
+| FORME — digital sculpture garden | https://zhaocun-forme.netlify.app | https://github.com/cosmopolitan033/zhaocun-forme |
 
 These are personal creative development studies. Each site retains its upstream source and asset credits. Update their text in each repository’s `src/content.js`. The parent portfolio’s cards and links are configured in `src/content.ts`.
+
+2026-10-27：CURRENT 与 FORME 审核版已获确认，正式作品更新为三维霓虹公路和数字雕塑展。ORBIT 保持原样。
+
+首屏电脑会立即显示同一场景的透明预览图，模型预加载后自动接上可拖动的 3D 场景，无需点击。场景在可视区域持续渲染，离开首屏暂停绘制。

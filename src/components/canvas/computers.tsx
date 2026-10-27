@@ -1,15 +1,24 @@
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 
 import { useInView } from "../../hooks/use-in-view";
 
+const COMPUTER_MODEL = "/desktop_pc/scene.gltf";
+useGLTF.preload(COMPUTER_MODEL);
+
 type ComputersProps = {
   isMobile: boolean;
+  onReady: () => void;
 };
 
-const Computers = ({ isMobile }: ComputersProps) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+const Computers = ({ isMobile, onReady }: ComputersProps) => {
+  const computer = useGLTF(COMPUTER_MODEL);
+  const renderedFrames = useRef(0);
+  useFrame(() => {
+    // Remove the matching poster only after the loaded scene has drawn.
+    if (++renderedFrames.current === 2) requestAnimationFrame(onReady);
+  });
 
   return (
     <mesh>
@@ -40,7 +49,8 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(
     () => window.matchMedia("(max-width: 767px)").matches,
   );
-  const [contextLost, setContextLost] = useState(false);
+  const [ready, setReady] = useState(false);
+  const onReady = useCallback(() => setReady(true), []);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 767px)");
@@ -58,18 +68,23 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (isInView) setContextLost(false);
-  }, [isInView]);
-
   return (
     <div
       ref={ref}
       className="hero-computer-canvas absolute inset-0 z-0 pointer-events-none md:pointer-events-auto"
+      data-scene-ready={ready}
     >
-      {isInView && !contextLost && (
+      <img
+        src="/desktop_pc/preview.webp"
+        alt=""
+        aria-hidden="true"
+        className={`hero-computer-poster${ready ? " is-ready" : ""}`}
+        fetchPriority="high"
+      />
         <Canvas
-          frameloop="demand"
+          // Start drawing without waiting for an OrbitControls interaction.
+          // Keep the loaded scene mounted, but stop drawing off screen.
+          frameloop={isInView ? "always" : "never"}
           shadows={!isMobile}
           dpr={isMobile ? 1 : [1, 2]}
           camera={{ position: [20, 3, 5], fov: 25 }}
@@ -81,14 +96,6 @@ const ComputersCanvas = () => {
           }}
           onCreated={({ gl }) => {
             gl.setClearColor(0x000000, 0);
-            gl.domElement.addEventListener(
-              "webglcontextlost",
-              (event) => {
-                event.preventDefault();
-                setContextLost(true);
-              },
-              { once: true },
-            );
           }}
           style={{
             background: "transparent",
@@ -104,12 +111,9 @@ const ComputersCanvas = () => {
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={Math.PI / 2}
             />
-            <Computers isMobile={isMobile} />
+            <Computers isMobile={isMobile} onReady={onReady} />
           </Suspense>
-
-          <Preload all />
         </Canvas>
-      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 {
   "provider": "Netlify",
   "project_id": "95d0ff6f-340c-4883-8d58-cac6c2c18d07",
-  "deploy_id": "6ade48363d1eac6d706fadc9",
+  "deploy_id": "6ae074473d1d4be4f5bcafdc",
   "initial_project_slug": "quiet-beijinho-62344d",
   "content_source": "https://github.com/cosmopolitan033",
   "build_command": "npm run build",
@@ -9,11 +9,12 @@
   "checks": [
     "TypeScript passed",
     "production build passed",
-    "all model asset paths resolved",
-    "desktop 3D scene and modal checked",
-    "400px mobile menu and project layout checked",
-    "ORBIT, CURRENT, FORME links and preview images checked",
-    "anonymous production JS and CSS exactly match local production build"
+    "updated cards, screenshots and details checked",
+    "ORBIT card, link and image unchanged",
+    "first-paint poster visible before 3D readiness",
+    "IAB reload without clicks automatically renders computer",
+    "returning to hero after navigation checked",
+    "anonymous production JS, CSS, hero poster and project screenshots exactly match local build"
   ],
   "url": "https://zhaocun-portfolio.netlify.app",
   "project_slug": "zhaocun-portfolio",
@@ -21,15 +22,27 @@
   "repository": "https://github.com/cosmopolitan033/zhaocun-portfolio",
   "anonymous_http_verification": "HTTP 200: homepage, JS, CSS, both 3D model files, credits",
   "deployment_method": "Netlify Drop ZIP upload",
-  "archive_sha256": "a258db166cd93f5e82026276f5b8626f8fc8fffbeacdecea8d82b24fb6daf77a",
+  "archive_sha256": "5c8596ff4975d0ac943459281bebbf50a9f33fc44fe680fade62b67b9a6d5bd6",
   "verified_assets": [
     {
-      "path": "/assets/index-C0to7Rxv.js",
-      "sha256": "201c87edb37f29aa0535f749de446e147740138b1b47c655d80565d7518fe070"
+      "path": "/assets/index-CRCAQT8N.js",
+      "sha256": "f806eb407ba2a1ae30c0f039fc21aa184dc367a12d7f4ab1b64e17e9054ca1b7"
     },
     {
-      "path": "/assets/index-BDgvMzZ0.css",
-      "sha256": "8ee89e57dc40252190f0b88eebb809a4b3a214b24e8525e4339c972ae3a6ba97"
+      "path": "/assets/index-CVPBvJu7.css",
+      "sha256": "603adb74cd72c764584ddf00d726643b4bfe225ffff673ff7ba816aafbcc40f3"
+    },
+    {
+      "path": "/desktop_pc/preview.webp",
+      "sha256": "15efea90ba8603e7b38123ff0e784f3388f3f5f797102f51a584122bea73df3a"
+    },
+    {
+      "path": "/showcases/current-v2.png",
+      "sha256": "ce070e6281810415b4eedfea6e781a32b77605c199f77a7b1c0e8093e7d27187"
+    },
+    {
+      "path": "/showcases/forme-v2.png",
+      "sha256": "8680daadd6c14cbf4f3b2c988ee0294ab69cd76814cded201447a94b88450cb9"
     }
   ],
   "showcases": {
@@ -45,5 +58,8 @@
       "url": "https://zhaocun-forme.netlify.app",
       "repository": "https://github.com/cosmopolitan033/zhaocun-forme"
     }
-  }
+  },
+  "approved_showcases_version": 2,
+  "approval_date": "2026-10-27",
+  "source_branch": "main"
 }

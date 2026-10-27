@@ -2,7 +2,7 @@ import { Component, Suspense, lazy, useEffect, useRef, useState, type ReactNode 
 import { motion, useReducedMotion } from 'framer-motion';
 import { portfolio } from './content';
 import './portfolio.css';
-const Computer = lazy(() => import('./components/canvas/computers'));
+import Computer from './components/canvas/computers';
 const Earth = lazy(() => import('./components/canvas/earth'));
 
 class SceneBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
@@ -15,7 +15,7 @@ function Reveal({ children, className = '' }: { children: ReactNode; className?:
   return <motion.div className={className} initial={reduce ? false : { opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .12 }} transition={{ duration: .65 }}>{children}</motion.div>;
 }
 function ProjectArt({ image, title }: { image: string; title: string }) {
-  return <div className="project-art showcase-preview"><img src={image} alt={`${title} website preview`} loading="lazy"/><span className="preview-caption">LIVE EXPERIENCE <span>↗</span></span></div>;
+  return <div className={`project-art showcase-preview${image.endsWith("-v2.png") ? " browser-capture" : ""}`}><img src={image} alt={`${title} website preview`} loading="lazy"/><span className="preview-caption">LIVE EXPERIENCE <span>↗</span></span></div>;
 }
 export default function App() {
   const [menu, setMenu] = useState(false);
